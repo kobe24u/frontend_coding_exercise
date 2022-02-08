@@ -1,0 +1,643 @@
+@mixin fontStyle {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+@mixin googleFont {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+@mixin googleFontContent {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: $text-color-grey;
+}
+
+@mixin buttonStyle{
+    border: 0;
+    border-radius: 5px;
+    width: 200px;
+    height:40px;
+    text-align: center;
+    @include googleFont;
+    font-size: 15px;
+    margin: 10px;
+    box-shadow:  0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+@mixin courseBox{
+    position: relative;
+    width:18%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-top:60px;
+    padding: 0;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+@mixin courseBoxS{
+    width:90%;
+    margin:5%;
+    margin-top:60px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 10px;
+    }
+
+@mixin courselogo{
+    margin: 15px 5px ;
+    color: $section-color-green;
+}
+
+@mixin dueDate{
+    background-color: $section-color-lightgrey;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    margin: 10px;
+    font-size: 13px;
+    width:70%;
+
+}
+
+@mixin img{
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+  
+}
+
+$text-color-blue:#87A7B3;
+$text-color-grey:#818181;
+$background-color:rgb(53, 80, 125);
+$section-color-green:#4ebdaa;
+$section-color-grey:#B2B1B9;
+$section-color-lightgrey:#dddddd;
+
+
+*{
+    @include fontStyle;
+    box-sizing: border-box;
+  }
+.copyright{
+    margin-left:20px;
+    margin-top: 300px;
+    padding-bottom: 50px;
+}
+
+.foot1{
+    display: inline;
+    @include googleFontContent;
+    font-size: 15px;
+    color: $text-color-grey;
+}
+
+.foot2{
+    display: inline;
+    @include googleFontContent;
+    font-size: 15px;
+    color: $text-color-blue;
+}
+
+  .download-btn-container a {
+    cursor: pointer;
+  }
+  
+  .download-btn-container {
+    display: inline-block;
+
+  }
+  
+  .download-btn-container a {
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #c94927;
+  }
+  
+  
+  .dropdown-download {
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  
+  .dropdown-download a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-download a:hover {
+    background-color: #ddd
+  }
+  
+  .show {
+    display: block;
+  }
+
+
+
+  .wrapper{
+      width: 100%;
+      margin: 0;
+     
+  }
+
+  .sideNavbar-main{
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      margin-left: 0;
+      background-color: $background-color;
+      padding: 30px 0;
+  }
+
+  #navbarUL {
+      padding-left: 1em;
+  }
+
+  #navbarList{
+      padding: 15px 10px;
+      font-size: 0.8rem;
+      @include googleFont;
+  }
+
+ #navbarUL{
+     padding: 0;
+ }
+
+  #navbarList-active{
+    padding: 15px 10px;
+    font-size: 0.8rem;
+    @include googleFont;
+    background:$section-color-grey;
+  }
+
+  
+  .sideNavbar-main a{
+    @include fontStyle;
+  } 
+
+  .sideNavbar-main li a {
+      color: white;
+      width: 25px;
+  } 
+.container{
+    margin: 0px;
+    max-width:3000px;
+    padding: 0px;
+}
+  #logoLi{
+      width: 20px;
+      color: white;
+  }
+
+  #navbarList:hover{
+    padding: 15px 10px;
+      font-size: 1rem;
+     @include googleFont;
+}
+
+  #mainContent{
+    margin-left: 200px;
+    margin-right:0;
+    margin-top: 0;
+}
+#topMenu{ 
+    margin-bottom: 1rem;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+#companylogo{
+    display: inline;
+    height: 80px;
+    margin-left: 10px;
+}
+
+#topNavbar{
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+    padding: auto;
+
+}
+
+#hiddenMenu{
+    display: inline;
+    margin: 10px 0;
+    padding: 1rem;
+
+}
+
+#menu{
+    @include fontStyle;
+    @include googleFont;
+    font-size:15px;
+    padding: 1rem;
+    color: $text-color-blue;
+    display:none;
+}
+#user {
+    display:block;
+    @include fontStyle;
+    @include googleFont;
+    font-size:15px;
+    padding: 1rem;
+    color: $text-color-blue;
+}
+
+#calendar {
+    display:inline;
+    @include fontStyle;
+    @include googleFont;
+    font-size:15px;
+   padding: 1em;
+    color: $text-color-blue;
+}
+
+#myTraining{
+    margin: 20px;
+}
+
+#title{
+    @include googleFont;
+    font-size: 20px;
+    padding: 15px;
+    color: $text-color-grey;
+}
+
+.redbutton{
+    display:inline-block;
+    position: absolute;
+    margin:auto;
+    right: 15px;
+    background-color: red;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 3px;
+}
+
+.buttonCOM{
+    position: relative;
+    @include buttonStyle;
+    background-color: $section-color-green;
+    @include googleFont;
+    color: white;
+}
+
+.buttonSOFT{
+    position: relative;
+    @include buttonStyle;
+    background-color: $section-color-grey;
+    @include googleFont;
+    color: white;
+
+}
+
+.overdue{
+    position: absolute;
+    height: 33px;
+    top:-33px;
+    right:60px;
+    background-color: red;
+    padding:10px 20px;
+    margin: 0;
+    @include googleFont;
+    font-size: 13px;
+    color: white;
+    border-radius: 8px 8px 0 0;
+
+}
+#courseList{
+    margin-left: 200px;
+    margin-right: 100px;
+    margin-top: 0.5rem;
+}
+
+#courseInfo{
+    box-shadow: 0 0  10px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+#detailCourse{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin-top: 0.5rem;
+}
+
+#courseLogo{
+    @include courselogo;
+}
+
+#logox3 {
+    height:50px;
+    padding: 0 10px;
+}
+
+#subTitle{
+    @include googleFontContent;
+    margin: 10px;
+    font-size: 15px;
+    height: 80px;
+}
+
+
+#courseIMG{
+    @include img;
+}
+
+#dueDate{
+    @include dueDate;
+    @include googleFont;
+
+}
+
+#anti{
+    @include courseBox;
+}
+
+
+#discrimination{
+    @include courseBox;
+}
+
+
+#consumerProtection{
+    @include courseBox;
+    box-shadow: 0 0 10px 10px rgba(#4ebdaa, 0.5);
+   
+}
+
+#mouduleInfo{
+    color: $section-color-green;
+    padding: 15px 0;
+    @include googleFont;
+    font-size: 13px;
+}
+
+#scrollDown{
+    border: 0;
+    background-color: white;
+    color: $section-color-green;
+}
+
+#scrollDown :hover{
+    border: 0;
+    background-color:$section-color-lightgrey;
+    color: $section-color-green;
+}
+
+
+#workHealth{
+    @include courseBox;
+}
+
+
+#consumer{
+    @include courseBox;
+}
+
+
+#mouduleSection{
+    display: none;
+    width: 100%;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.moudule{
+    position: relative;
+    @include courseBox;
+}
+
+.mouduleList{
+    
+    display:flex;
+    width:100%;
+    margin-top: 0.5rem;
+}
+
+.calendarPanel{
+    position:fixed;
+    right:0;
+    width:300px;
+    height:100vh;
+    background-color: black;
+    top:0;
+    z-index: 2;
+    margin: 0;
+    transform:translateX(300px);
+    transition: transform 0.3s;
+}
+
+.calendarPanel_open{
+    position:fixed;
+    right:0;
+    width:300px;
+    height:100vh;
+    background-color: black;
+    top:0;
+    z-index: 2;
+    margin: 0;
+    transform:translateX(0px);
+    transition: transform 0.3s;
+    box-shadow: 0 0 15PX rgba(0, 0, 0, 0.2);
+}
+
+#whiteText{
+    @include googleFont;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+#whiteLogo{
+    padding:20px;
+    color: white;
+}
+
+#date{
+    @include googleFont;
+    color: white;
+    font-size: 15px;
+    padding:5px 20px;
+}
+
+
+.dateDiv1{
+    margin: 50px auto;
+    border-left: solid;
+    border-width: 10px;
+    border-color: $text-color-blue;
+}
+
+.dateDiv2{
+    margin: 50px auto;
+    border-left: solid;
+    border-width: 10px;
+    border-color: rgb(243, 243, 110);
+}
+
+.click_moudule{
+    box-shadow: 0 0 10px 10px rgba(#4ebdaa, 0.3);
+}
+
+@media (max-width: 1200px){
+    #wrapper{width:100%;
+        margin: auto;
+    }
+
+    .blackBackground{
+        position: fixed;
+        height:100vh;
+        width:100%;
+        margin: 0px;
+        transform:translateX(-100%);
+        z-index: 1;
+    }
+
+    .blackBackground_open{
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        position: fixed;
+        height:100vh;
+        width:100%;
+        margin: 0px;
+        left: 100%;
+        transform: trabslateX(0px);
+        transition: transform 0.3s;
+        z-index: 1;
+        
+    }
+
+    .sideNavbar-main{
+        position:fixed;
+        top:0;
+        left:0;
+        z-index: 2;
+        width: 200px;
+        margin: 0;
+        transform:translateX(-200px);
+    }
+
+
+    .sideNavbar_open{
+        position:fixed;
+        top:0;
+        left:200px;
+        z-index: 2;
+        width: 200px;
+        margin: 0;
+        transition: transform 0.5s;
+        transform: trabslateX(0px);
+        box-shadow: 0 0 15PX rgba(0, 0, 0, 0.2);
+    }
+
+    #sideCalendarMenu{
+        display:fixed;
+        width: 200px;
+    }
+
+    #menu{
+        display: inline;
+        width: 50px;
+    }
+
+
+    #mainContent{
+        width:100%;
+        margin: 0;
+    }
+
+    #courseList{
+        width:100%;
+        margin: auto;
+
+    }
+
+    #detailCourse{
+        display:flex;
+    }
+
+    #anti{
+        @include courseBoxS;
+        order: 1;
+    }
+    
+    
+    #discrimination{
+        @include courseBoxS;
+        order:2;
+    }
+    
+    
+    #consumerProtection{
+        @include courseBoxS;
+        order: 3;
+    }
+    #mouduleSection{
+        order:4;
+    }
+
+    #workHealth{
+        @include courseBoxS;
+        order:5;
+    }
+    
+    #consumer{
+        @include courseBoxS;
+        order: 6;
+    }
+
+    .moudule{
+        display: block;
+        @include courseBoxS;
+    }
+
+    .mouduleList{
+        display:block;
+    }
+
+    #topNavbar{
+        display: none;
+    }
+
+    #companylogo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #hiddenMenu{
+        display: inline-flex;
+        width: 50px;
+    }
+
+    #topMenu{
+        position: relative;
+    }
+
+    .buttonCOM{
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;  
+    }
+
+    .buttonSOFT{
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+}
+
